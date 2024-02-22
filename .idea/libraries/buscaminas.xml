@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="buscaminas">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/buscaminas.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
