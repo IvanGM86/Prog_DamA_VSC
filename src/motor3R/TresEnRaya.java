@@ -38,6 +38,15 @@ public class TresEnRaya {
 
     }
 
+    /**
+     * Obtiene el tablero actual del juego.
+     *
+     * @return Una matriz que representa el tablero actual del juego.
+     */
+    public char[][] getTablero() {
+        return tablero;
+    }
+
     private void inicializarTablero() {
 
         for (int i = 0; i < tablero.length; i++) {
@@ -47,23 +56,6 @@ public class TresEnRaya {
             }
 
         }
-    }
-
-    /**
-     * Imprime el estado actual del tablero en la consola.
-     */
-    public void imprimirTablero() {
-
-        System.out.println();
-
-        for (char[] fila : tablero) {
-            for (char c : fila) {
-                System.out.print("| " + c + " ");
-            }
-            System.out.println("|\n");
-        }
-        System.out.println("\n");
-
     }
 
     /**

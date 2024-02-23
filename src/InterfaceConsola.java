@@ -32,7 +32,7 @@ public class InterfaceConsola {
 
         while (jugando) {
 
-            juego.imprimirTablero();
+            imprimirTablero(juego.getTablero());
 
             while (!juego.hayGanador() && !juego.tableroLleno()) {
 
@@ -46,7 +46,7 @@ public class InterfaceConsola {
 
                 if (juego.rellenarCasilla(fila, columna, juego.getJugador())) {
 
-                    juego.imprimirTablero();
+                    imprimirTablero(juego.getTablero());
 
                     if (!juego.hayGanador() && !juego.tableroLleno()) {
 
@@ -54,7 +54,7 @@ public class InterfaceConsola {
 
                         juego.turnoMaquina();
 
-                        juego.imprimirTablero();
+                        imprimirTablero(juego.getTablero());
                     }
 
                 } else {
@@ -86,6 +86,20 @@ public class InterfaceConsola {
             juego.prepararNueva();
 
         }
+
+    }
+
+    public static void imprimirTablero(char[][] tablero) {
+
+        System.out.println();
+
+        for (char[] fila : tablero) {
+            for (char c : fila) {
+                System.out.print("| " + c + " ");
+            }
+            System.out.println("|\n");
+        }
+        System.out.println("\n");
 
     }
 
