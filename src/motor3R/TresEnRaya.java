@@ -39,12 +39,18 @@ public class TresEnRaya {
     }
 
     /**
-     * Obtiene el tablero actual del juego.
+     * Obtiene una copia del tablero actual del juego.
      *
-     * @return Una matriz que representa el tablero actual del juego.
+     * @return Una copia de la matriz (tablero actual) del juego.
      */
     public char[][] getTablero() {
-        return tablero;
+        char[][] copiaTablero = new char[tablero.length][tablero[0].length];
+        for (int i = 0; i < tablero.length; i++) {
+            for (int j = 0; j < tablero[i].length; j++) {
+                copiaTablero[i][j] = tablero[i][j];
+            }
+        }
+        return copiaTablero;
     }
 
     private void inicializarTablero() {
